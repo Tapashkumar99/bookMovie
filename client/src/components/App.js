@@ -88,7 +88,7 @@ const App = () => {
 
   // Get Request:- Get old data from dataBase
   const getDataFromDatabase = () => {
-    fetch("http://localhost:8080/api/booking")
+    fetch("https://bookmyshow.onrender.com/api/booking")
       .then((response) => response.json())
       .then((data) => setBookedSlot(data))
       .catch((err) => alert("Error occurred from server!"));
@@ -96,7 +96,7 @@ const App = () => {
 
   // Post request:- storing user data to dataBase
   const saveDataToDatabase = async () => {
-    const response = await fetch("http://localhost:8080/api/booking", {
+    const response = await fetch("https://bookmyshow.onrender.com/api/booking", {
       method: "POST",
       body: JSON.stringify(movieData),
       headers: {
