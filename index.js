@@ -29,12 +29,12 @@ app.get("/api/booking", async (req, res) => {
   }
 });
 
-if(process.env.NODE_ENV == 'production'){
-  app.get('/',(req,res) => {
-    app.use(express.static(path.resolve(__dirname,'client','build')))
-    res.sendFile(path.resolve(__dirname,'client','build','index.html'))
-  })
-}
+// if(process.env.NODE_ENV == 'production'){
+//   app.get('/',(req,res) => {
+//     app.use(express.static(path.resolve(__dirname,'client','build')))
+//     res.sendFile(path.resolve(__dirname,'client','build','index.html'))
+//   })
+// }
 
 // Start Server
 app.listen(port, () => console.log(`App listening on port ${port}!`));
