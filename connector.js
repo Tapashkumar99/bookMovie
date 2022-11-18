@@ -1,6 +1,6 @@
 const mongodb = require('mongodb');
 
-const mongoURI = "mongodb+srv://BookMyShow:BookMyShow@cluster0.hgdnylr.mongodb.net/?retryWrites=true&w=majority"
+const mongoURI = require("./config/keys")
 
 let mongoose = require('mongoose');
 //  Importing Mongoose Schema from schema.js
